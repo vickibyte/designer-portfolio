@@ -1,103 +1,120 @@
-import Image from "next/image";
+import Image from "next/image"
+import Header from "@/components/Header"
+import { PenTool, Layers, Palette, Monitor } from "lucide-react"
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main>
+      <Header />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Hero Section */}
+      <section className="bg-white py-20 px-6 flex flex-col md:flex-row items-center max-w-7xl mx-auto">
+        {/* Left Content */}
+        <div className="flex-1 space-y-6">
+          <h2 className="text-6xl md:text-5xl font-bold text-black">
+            Nigerian Graphic Designer
+          </h2>
+          
+          <p className="text-gray-600 max-w-md text-lg">
+            I create bold and creative visuals for brands, businesses, and
+            individuals, combining design with storytelling to leave a lasting
+            impression.
+          </p>
+          <button className="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-green-700 transition">
+            Get in Touch
+          </button>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+
+        {/* Right Image */}
+        <div className="flex-1 mt-10 md:mt-0 flex justify-center">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/profile.png"
+            alt="Clement David"
+            width={300}
+            height={300}
+            className="rounded-full object-cover shadow-lg"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        </div>
+      </section>
+
+      {/* Portfolio Section */}
+      <section id="portfolio" className="py-20 px-6 bg-gray-50">
+        <div className="max-w-7xl mx-auto text-center">
+          <h3 className="text-3xl font-bold mb-10">Featured Projects</h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Project Card */}
+            <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+              <Image
+                src="/project1.png"
+                alt="Project 1"
+                width={400}
+                height={250}
+                className="rounded-lg"
+              />
+              <h4 className="mt-4 font-bold">Brand Identity Design</h4>
+              <p className="text-gray-600 text-sm">
+                A bold brand identity for a startup company.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+              <Image
+                src="/project2.png"
+                alt="Project 2"
+                width={400}
+                height={250}
+                className="rounded-lg"
+              />
+              <h4 className="mt-4 font-bold">Illustration Artwork</h4>
+              <p className="text-gray-600 text-sm">
+                Digital illustration crafted with storytelling.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+              <Image
+                src="/project3.png"
+                alt="Project 3"
+                width={400}
+                height={250}
+                className="rounded-lg"
+              />
+              <h4 className="mt-4 font-bold">Poster & Print Design</h4>
+              <p className="text-gray-600 text-sm">
+                Print materials for an event campaign.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills" className="bg-white py-20 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <h3 className="text-3xl font-bold mb-10">My Skills</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="flex flex-col items-center space-y-2">
+              <PenTool className="w-10 h-10 text-green-600" />
+              <p className="font-bold text-lg">Brand Identity</p>
+            </div>
+            <div className="flex flex-col items-center space-y-2">
+              <Layers className="w-10 h-10 text-green-600" />
+              <p className="font-bold text-lg">Illustration</p>
+            </div>
+            <div className="flex flex-col items-center space-y-2">
+              <Palette className="w-10 h-10 text-green-600" />
+              <p className="font-bold text-lg">Print Design</p>
+            </div>
+            <div className="flex flex-col items-center space-y-2">
+              <Monitor className="w-10 h-10 text-green-600" />
+              <p className="font-bold text-lg">UI Graphics</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-green-600 text-white py-6 text-center">
+        <p>© 2025 Fisher9ine Creative Hub — All Rights Reserved</p>
       </footer>
-    </div>
-  );
+    </main>
+  )
 }
