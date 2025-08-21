@@ -13,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head />  {/* ✅ required for metadata & head tags */}
+      <head />
       <body className="antialiased bg-white text-gray-900">
         {children}
       </body>
