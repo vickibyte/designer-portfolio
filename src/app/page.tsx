@@ -51,7 +51,7 @@ export default function Home() {
             <Link href="https://linkedin.com" target="_blank">
               <Linkedin className="w-6 h-6 text-green-500 hover:text-green-700 transition" />
             </Link>
-            <Link href="https://wa.me/2347065462076" target="_blank">
+            <Link href="https://wa.me/+2347065462076" target="_blank">
               <MessageCircle className="w-6 h-6 text-green-500 hover:text-green-700 transition" />
             </Link>
           </div>

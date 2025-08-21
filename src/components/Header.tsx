@@ -38,24 +38,7 @@ export default function Header() {
             <Link href="#skills">Skills</Link>
             <Link href="#contact">Contact</Link>
 
-            {/* Mobile social icons */}
-            <div className="flex space-x-4 mt-3">
-              <Link href="https://facebook.com" target="_blank">
-                <Facebook className="w-5 h-5 text-green-500 hover:text-green-700 transition" />
-              </Link>
-              <Link href="https://x.com" target="_blank">
-                <Twitter className="w-5 h-5 text-green-500 hover:text-green-700 transition" />
-              </Link>
-              <Link href="https://instagram.com" target="_blank">
-                <Instagram className="w-5 h-5 text-green-500 hover:text-green-700 transition" />
-              </Link>
-              <Link href="https://linkedin.com" target="_blank">
-                <Linkedin className="w-5 h-5 text-green-500 hover:text-green-700 transition" />
-              </Link>
-              <Link href="https://wa.me/2348012345678" target="_blank">
-          <Phone className="w-6 h-6 text-green-600 hover:text-green-800 transition" />
-        </Link>
-            </div>
+            
           </div>
         )}
       </nav>
